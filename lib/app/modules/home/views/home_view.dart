@@ -44,17 +44,25 @@ class HomeView extends GetView<HomeController> {
                 height: 37,
               ),
               Container(
-                child: Container(
-                  child: CircleAvatar(
-                    maxRadius: 170,
-                    backgroundImage: NetworkImage(
-                      'https://i.ibb.co/2KwFmyy/photo-1470225620780-dba8ba36b745.jpg',
-                    ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKtB_q9MkG1DjB0RJJNyhOlAOa8mdVzboUtQ&usqp=CAU'),
+                    fit: BoxFit.cover,
+                  ),
+                  gradient: LinearGradient(
+                    colors: const [
+                      Colors.redAccent,
+                      Colors.blueAccent,
+                    ],
                   ),
                 ),
+                width: 470,
+                height: 420,
               ),
               SizedBox(
-                height: 60,
+                height: 40,
               ),
               Container(
                 height: 100,
@@ -87,9 +95,6 @@ class HomeView extends GetView<HomeController> {
                               color: Colors.white,
                               size: 27.0,
                             ),
-                            // SizedBox(
-                            //   width: 10,
-                            // ),
                           ],
                         ),
                       ),
@@ -108,12 +113,9 @@ class HomeView extends GetView<HomeController> {
                           children: <Widget>[
                             Icon(
                               Icons.play_arrow,
-                              color: Colors.grey,
+                              color: Colors.white,
                               size: 30.0,
                             ),
-                            // SizedBox(
-                            //   width: 10,
-                            // ),
                           ],
                         ),
                       ),
